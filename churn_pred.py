@@ -6,51 +6,67 @@ Created on Tue Feb  8 16:19:58 2022
 """
 
 import streamlit as st
+import pickle
+
+
+with open('grid_pkl','rb')  as f:
+    model=pickle.load(f)
+
+
+
+
 
 st.title('Telecom Churn Prediction')
 
 
-st.selectbox('Dependents',('Yes','No'))
 
-st.selectbox('Partner',('Yes','No'))
+partner=st.selectbox('Partner',(1,0))
 
-
-st.selectbox('Internet Service',('Fiber optic','DSL','No'))
+Dependents=st.selectbox('Dependents',(1,0))
 
 
-st.selectbox('Online Security',('Yes','No'))
+IS=st.selectbox('Internet Service',(0,1,2))
 
 
-st.selectbox('Online Backup',('Yes','No'))
+osec=st.selectbox('Online Security',(1,0))
 
 
-st.selectbox('Device Protection',('Yes','No'))
+oback=st.selectbox('Online Backup',(1,0))
 
 
-st.selectbox('StreamingTV',('Yes','No'))
-
-st.selectbox('OnlineBackup',('Yes','No'))
-
-st.selectbox('Streaming Movies',('Yes','No'))
-
-st.selectbox('Contract',('Monthly','One year','Two year'))
+dprot=st.selectbox('Device Protection',(1,0))
 
 
-st.selectbox('Paperless Billing',('Yes','No'))
+tecsup=st.selectbox('Tech Support',(1,0))
 
 
-st.selectbox('Payment Method',('Electronic check','Mailed check ','Bank transfer (automatic)','Credit card (automatic)'))
+stv=st.selectbox('Streaming TV',(1,0))
 
 
-st.number_input('Monthly Charges')
+sm=st.selectbox('Streaming Movies',(1,0))
 
-st.number_input('Total Charges')
-
-
-
-st.button('Submit')
+cont=st.selectbox('Contract',(0,1,2))
 
 
+pbill=st.selectbox('Paperless Billing',(1,0))
+
+
+paymet=st.selectbox('paymet',(0,1,2,3))
+
+
+mc=st.number_input('Monthly Charges')
+
+tc=st.number_input('Total Charges')
+
+
+
+if st.button('Submit'):
+    predict=model.predict([[partner,Dependents,IS,osec,oback,dprot,tecsup,stv,sm,cont,pbill,paymet,mc,tc]])
+    if (predict[0])==0:
+        st.write('Customer will not churn')
+    else:
+        st.write('Customer is likely to churn')
+    
 
 
 
