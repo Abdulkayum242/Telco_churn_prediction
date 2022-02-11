@@ -1,1 +1,1 @@
-web: gunicorn churn_pred:app
+web: gunicorn App:app
