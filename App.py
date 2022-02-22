@@ -35,52 +35,52 @@ else:
      Dependents=0  
 
 
-Internet Service=st.selectbox('Internet Service',('DSL','Fiber optic','No'))
-if Internet Service=='DSL':
-    Internet Service=0
-elif Internet Service=='Fiber optic':
-    Internet Service=1
+Internet_Service=st.selectbox('Internet_Service',('DSL','Fiber optic','No'))
+if Internet_Service=='DSL':
+    Internet_Service=0
+elif Internet_Service=='Fiber optic':
+    Internet_Service=1
 else:
-    Internet Service=2
+    Internet_Service=2
 
 
 
-Online Security=st.selectbox('Online Security',('yes','no'))
-if Online Security=='yes':
-    Online Security=1
+Online_Security=st.selectbox('Online_Security',('yes','no'))
+if Online_Security=='yes':
+    Online_Security=1
 else:
-     Online Security=0
+     Online_Security=0
 
 
-Online Backup=st.selectbox('Online Backup',('yes','no'))
-if Online Backup=='yes':
-    Online Backup=1
+Online_Backup=st.selectbox('Online_Backup',('yes','no'))
+if Online_Backup=='yes':
+    Online_Backup=1
 else:
-     Online Backup=0
+     Online_Backup=0
 
-Device Protection=st.selectbox('Device Protection',('yes','no'))
-if Device Protection=='yes':
-    Device Protection=1
+Device_Protection=st.selectbox('Device_Protection',('yes','no'))
+if Device_Protection=='yes':
+    Device_Protection=1
 else:
-     Device Protection=0
+     Device_Protection=0
 
-Tech Support=st.selectbox('Tech Support',('yes','no'))
-if Tech Support=='yes':
-    Tech Support=1
+Tech_Support=st.selectbox('Tech_Support',('yes','no'))
+if Tech_Support=='yes':
+    Tech_Support=1
 else:
-     Tech Support=0
+     Tech_Support=0
 
-Streaming TV=st.selectbox('Streaming TV',('yes','no'))
-if Streaming TV=='yes':
-    Streaming TV=1
+Streaming_TV=st.selectbox('Streaming_TV',('yes','no'))
+if Streaming_TV=='yes':
+    Streaming_TV=1
 else:
-     Streaming TV=0
+     Streaming_TV=0
 
-Streaming Movies=st.selectbox('Streaming Movies',('yes','no'))
-if Streaming Movies=='yes':
-    Streaming Movies=1
+Streaming_Movies=st.selectbox('Streaming_Movies',('yes','no'))
+if Streaming_Movies=='yes':
+    Streaming_Movies=1
 else:
-     Streaming Movies=0
+     Streaming_Movies=0
 
 Contract=st.selectbox('Contract',('Month-to-month','One year','Two year'))
 if Contract=='Month-to-month':
@@ -91,21 +91,21 @@ else:
     Contract=2
 
 
-Paperless Billing=st.selectbox('Paperless Billing',('yes','no'))
-if Paperless Billing=='yes':
-    Paperless Billing=1
+Paperless_Billing=st.selectbox('Paperless_Billing',('yes','no'))
+if Paperless_Billing=='yes':
+    Paperless_Billing=1
 else:
-     Paperless Billing=0
+     Paperless_Billing=0
 
-payment Method=st.selectbox('payment Method',('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)'))
-if payment Method==='Electronic check':
-     payment Method=0
- elif  payment Method=='Mailed check':
-    payment Method=1
- elif payment Method=='Bank transfer (automatic)':
-    payment Method=2            
+payment_Method=st.selectbox('payment_Method',('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)'))
+if payment_Method==='Electronic check':
+     payment_Method=0
+ elif  payment_Method=='Mailed check':
+    payment_Method=1
+ elif payment_Method=='Bank transfer (automatic)':
+    payment_Method=2            
 else:
-    payment Method=3
+    payment_Method=3
 
 mc=st.number_input('Monthly Charges')
 
