@@ -21,6 +21,12 @@ st.title('Telecom Churn Prediction')
 
 
 partner=st.selectbox('Partner',(1,0))
+if partner=='yes':
+    partner=1
+else:
+     partner=0  
+
+
 
 Dependents=st.selectbox('Dependents',(1,0))
 
