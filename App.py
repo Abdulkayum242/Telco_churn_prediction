@@ -114,7 +114,7 @@ tc=st.number_input('Total Charges')
 
 
 if st.button('Submit'):
-    predict=model.predict([[partner,Dependents,Internet_Service,Online_Security,Online_Backup,Device_Protection,Tech_Support,Streaming_TV,Streaming_Movies,Contract,Paperless_Billing,Payment_Method,mc,tc]])
+    predict=model.predict([[partner,Dependents,Internet_Service,Online_Security,Online_Backup,Device_Protection,Tech_Support,Streaming_TV,Streaming_Movies,Contract,Paperless_Billing,payment_Method,mc,tc]])
     if (predict[0])==0:
         st.write('Customer will not churn')
     else:
