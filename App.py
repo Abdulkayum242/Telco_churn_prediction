@@ -100,10 +100,10 @@ else:
 payment_Method=st.selectbox('payment_Method',('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)'))
 if payment_Method=='Electronic check':
      payment_Method=0
- elif  payment_Method=='Mailed check':
-    payment_Method=1
- elif payment_Method=='Bank transfer (automatic)':
-    payment_Method=2            
+elif  payment_Method=='Mailed check':
+     payment_Method=1
+elif payment_Method=='Bank transfer (automatic)':
+     payment_Method=2            
 else:
     payment_Method=3
 
