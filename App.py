@@ -18,7 +18,7 @@ with open('grid_pkl','rb')  as f:
 
 st.title('Telecom Churn Prediction')
 
-
+st.sidebar.title("Olympics Analysis")
 
 partner=st.selectbox('partner',('yes','no'))
 if partner=='yes':
