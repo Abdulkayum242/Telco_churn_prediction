@@ -20,7 +20,7 @@ st.title('Telecom Churn Prediction')
 
 
 
-partner=st.selectbox('Partner',(1,0))
+partner=st.selectbox('partner',('yes','no'))
 if partner=='yes':
     partner=1
 else:
@@ -28,37 +28,84 @@ else:
 
 
 
-Dependents=st.selectbox('Dependents',(1,0))
+Dependents=st.selectbox('Dependents',('yes','no'))
+if Dependents=='yes':
+    Dependents=1
+else:
+     Dependents=0  
 
 
-IS=st.selectbox('Internet Service',(0,1,2))
+Internet Service=st.selectbox('Internet Service',('DSL','Fiber optic','No'))
+if Internet Service=='DSL':
+    Internet Service=0
+elif Internet Service=='Fiber optic':
+    Internet Service=1
+else:
+    Internet Service=2
 
 
-osec=st.selectbox('Online Security',(1,0))
+
+Online Security=st.selectbox('Online Security',('yes','no'))
+if Online Security=='yes':
+    Online Security=1
+else:
+     Online Security=0
 
 
-oback=st.selectbox('Online Backup',(1,0))
+Online Backup=st.selectbox('Online Backup',('yes','no'))
+if Online Backup=='yes':
+    Online Backup=1
+else:
+     Online Backup=0
+
+Device Protection=st.selectbox('Device Protection',('yes','no'))
+if Device Protection=='yes':
+    Device Protection=1
+else:
+     Device Protection=0
+
+Tech Support=st.selectbox('Tech Support',('yes','no'))
+if Tech Support=='yes':
+    Tech Support=1
+else:
+     Tech Support=0
+
+Streaming TV=st.selectbox('Streaming TV',('yes','no'))
+if Streaming TV=='yes':
+    Streaming TV=1
+else:
+     Streaming TV=0
+
+Streaming Movies=st.selectbox('Streaming Movies',('yes','no'))
+if Streaming Movies=='yes':
+    Streaming Movies=1
+else:
+     Streaming Movies=0
+
+Contract=st.selectbox('Contract',('Month-to-month','One year','Two year'))
+if Contract=='Month-to-month':
+    Contract=0
+elif Contract=='One year':
+    Contract=1
+else:
+    Contract=2
 
 
-dprot=st.selectbox('Device Protection',(1,0))
+Paperless Billing=st.selectbox('Paperless Billing',('yes','no'))
+if Paperless Billing=='yes':
+    Paperless Billing=1
+else:
+     Paperless Billing=0
 
-
-tecsup=st.selectbox('Tech Support',(1,0))
-
-
-stv=st.selectbox('Streaming TV',(1,0))
-
-
-sm=st.selectbox('Streaming Movies',(1,0))
-
-cont=st.selectbox('Contract',(0,1,2))
-
-
-pbill=st.selectbox('Paperless Billing',(1,0))
-
-
-paymet=st.selectbox('paymet',(0,1,2,3))
-
+payment Method=st.selectbox('payment Method',('Electronic check','Mailed check','Bank transfer (automatic)','Credit card (automatic)'))
+if payment Method==='Electronic check':
+     payment Method=0
+ elif  payment Method=='Mailed check':
+    payment Method=1
+ elif payment Method=='Bank transfer (automatic)':
+    payment Method=2            
+else:
+    payment Method=3
 
 mc=st.number_input('Monthly Charges')
 
